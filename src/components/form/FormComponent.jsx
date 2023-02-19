@@ -34,12 +34,12 @@ const FormComponent = ({ info, setInfo, handleFormSubmit }) => {
       <p className="contact-header">
         <div>
           <a
-            href="https://github.com/clarusway"
+            href="https://github.com/ozelmel"
             className="design"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<Clarusway/> "}</code>
+            <code>{"<Melih/> "}</code>
           </a>
         </div>
         <span className="design header">design</span>

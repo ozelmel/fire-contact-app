@@ -1,6 +1,5 @@
 // Database bilgi ekleme,bilgiyi alma, bilgi silme ve değiştirme
 import firebase from "./firebase"
-
 import {
     useState,
     useEffect
@@ -14,6 +13,7 @@ import {
     remove,
     update
 } from "firebase/database";
+import Toastify from "./toast";
 
 // Bilgi Ekleme
 export const AddUser = (info) => {
@@ -25,6 +25,7 @@ export const AddUser = (info) => {
         phoneNumber: info.phoneNumber,
         gender: info.gender,
     })
+    Toastify("Kullanıcı bilgisi eklendi...")
 }
 
 // Bilgi Çağırma
@@ -65,6 +66,7 @@ export const DeleteUser = (id) => {
     const userRef = ref(db, "baglanti");
     remove(ref(db, "baglanti/" + id))
 
+    Toastify("Kullanıcı bilgisi silindi")
 }
 
 // Bilgi Değiştirme
